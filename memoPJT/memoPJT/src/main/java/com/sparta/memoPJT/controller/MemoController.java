@@ -1,12 +1,12 @@
-package com.sparta.momoPJT.controller;
+package com.sparta.memoPJT.controller;
 
-import com.sparta.momoPJT.entity.Memo;
+import com.sparta.memoPJT.entity.Memo;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-public class HelloController {
+public class MemoController {
     @GetMapping("/")
     public ModelAndView home() {
         return new ModelAndView("index");
