@@ -9,15 +9,16 @@ import java.util.Optional;
 
 public class JpaMemberRepository implements MemberRepository{
 
-
+    // JPA를 사용하기 위해서는 EntityManager를 사용해야한다.
     private final EntityManager em;
+
     public JpaMemberRepository(EntityManager em){
         this.em = em;
     }
 
     @Override
     public Member save(Member member) {
-        // persist :
+        // persist : 영속저장
         em.persist(member);
         return member;
     }
@@ -30,6 +31,7 @@ public class JpaMemberRepository implements MemberRepository{
 
     @Override
     public Optional<Member> findByName(String name) {
+        // JPQL : member로 바로 받아올 수 있다. 찾아서 id, name을 mapping하지 않아도 됨
         List<Member> result = em.createQuery("select m from Member m where m.name = :name", Member.class)
                 .setParameter("name", name)
                 .getResultList();

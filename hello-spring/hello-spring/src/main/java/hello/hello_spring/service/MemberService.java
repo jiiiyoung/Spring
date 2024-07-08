@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 
+// JPA를 쓰기 위해서 데이터를 저장, 변경할 때 Transactional이 필요하다.
 //@Service
 @Transactional
 public class MemberService {
@@ -23,12 +24,20 @@ public class MemberService {
 
     // 회원가입
     public Long join(Member member){
+
+        long start = System.currentTimeMillis();
+
         // 같은 이름이 있는 경우 가입X
-        vaildateDuplicateMember(member);
+        try {
+            vaildateDuplicateMember(member);
+            memberRepository.save(member);
+           return member.getId(); // 가입하면 Id를 반환한다.
+        } finally{ // try-finally 쌍은 예외가 발생하든 안하든 반드시 실행시켜야 하는 경우에 작성하는 코드이다.(ex) 실행 후 서버를 종료시켜야 하는 경우 등
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.println("Join " + timeMs + "ms");
+        }
 
-        memberRepository.save(member);
-
-        return member.getId(); // 가입하면 Id를 반환한다.
     }
 
     private void vaildateDuplicateMember(Member member){
@@ -48,7 +57,16 @@ public class MemberService {
 
     // 전체 회원 조회
     public List<Member> findMembers(){
-        return memberRepository.findAll();
+// 해당 주석 기능들은 AOP로 구현함(공통관심사이기 때문에 핵심 관심 기능만 남겨둠)
+//        long start  = System.currentTimeMillis();
+//
+//        try{
+            return memberRepository.findAll();
+//        } finally {
+//            long finish = System.currentTimeMillis();
+//            long timeMs = finish - start;
+//            System.out.println("findMembers" + timeMs + "ms");
+//        }
     }
 
     // Id로 조회
