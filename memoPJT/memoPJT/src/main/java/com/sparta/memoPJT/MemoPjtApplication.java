@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class MomoPjtApplication {
+public class MemoPjtApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(MomoPjtApplication.class, args);
+		SpringApplication.run(MemoPjtApplication.class, args);
 	}
 }
