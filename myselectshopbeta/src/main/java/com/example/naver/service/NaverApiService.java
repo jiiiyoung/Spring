@@ -1,7 +1,7 @@
-package com.example.myselectshopbeta.naver.service;
+package com.example.naver.service;
 
 
-import com.example.myselectshopbeta.naver.dto.ItemDto;
+import com.example.naver.dto.ItemDto;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;

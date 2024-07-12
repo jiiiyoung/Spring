@@ -1,4 +1,4 @@
-package com.example.myselectshopbeta;
+package com.example.myselectshopbeta.myselectshopbeta;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
