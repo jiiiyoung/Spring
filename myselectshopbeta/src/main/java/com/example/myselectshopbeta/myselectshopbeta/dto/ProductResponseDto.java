@@ -4,7 +4,7 @@ import com.example.myselectshopbeta.myselectshopbeta.entity.Product;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-// 관심 상품을 등록할 때 받은 정보
+// Product 테이블에서 받은 정보를 객체로 변환하는 것
 @Getter
 @NoArgsConstructor
 public class ProductResponseDto {

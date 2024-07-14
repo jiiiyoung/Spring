@@ -19,7 +19,7 @@ public class NaverApiService {
         RestTemplate rest = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.add("X-Naver-Client-Id", "64GPbBhToqmHeeroEJya");
-        headers.add("X-Naver-Client-Secret", "5yaoJO3PyI");;
+        headers.add("X-Naver-Client-Secret", "5yaoJO3PyI");
         String body = "";
 
 
