@@ -14,18 +14,19 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/api")
 public class ProductController {
-
-    // 홈화면
-    @GetMapping("/shop")
-    public ModelAndView shop() {
-        return new ModelAndView("index");
-    }
 
     // 관심상품 등록
     @PostMapping("/products")
-    public ProductResponseDto add(@RequestBody ProductRequestDto requestDto) throws SQLException {
+    public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto) throws SQLException {
+
+        ProductService productService = new ProductService();
+
+        return productService.createProduct(requestDto);
+
+        /*  컨트롤러가 모든 역할을 다 할 때 cotroller, service, repository의 코드가 다 있다.
         // Dto에 저장할 객체 만들기
         Product product = new Product(requestDto);
 
@@ -60,12 +61,20 @@ public class ProductController {
 
         // 응답 보내기
         return new ProductResponseDto(product);
+        */
+
     }
 
     // 관심상품(전체) 조회
     @GetMapping("/products")
     public List<ProductResponseDto> getProducts() throws SQLException {
 
+        ProductService productService = new ProductService();
+
+        // 응답 보내기
+        return productService.getProducts();
+
+        /*
         // DB의 데이터 가져와 담을 리스트 생성(원래 있던 리스트를 초기화)
         List<ProductResponseDto> products = new ArrayList<>();
 
@@ -94,11 +103,19 @@ public class ProductController {
 
         // 응답 보내기
         return products;
+        */
     }
 
     // 최저가격 등록
     @PutMapping("/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) throws SQLException {
+
+        ProductService productService = new ProductService();
+
+        // 응답 보내기(업데이트 된 상품 id)
+        return productService.updateProduct(id, requestDto);
+
+        /*
         Product product = new Product();
 
         // DB 연결
@@ -136,6 +153,7 @@ public class ProductController {
 
         // 응답 보내기(업데이트 된 상품 id)
         return product.getId();
+        */
 
 
     }
