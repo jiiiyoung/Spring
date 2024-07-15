@@ -2,9 +2,13 @@ package hello.core.member;
 
 public class MemberServiceImpl implements MemberService {
 
-    // MemberServiceImpl은 MemberRepository인 인터페이스(추상화)도 의존하고, MemoryMemberRepository 클래스인 구현체에도 의존한다.
-    // 구현체에 의존하기 않기 위해 인터페이스를 이용했는데 맞지 않다.
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    // 생성자주입
+    private final MemberRepository memberRepository;
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
