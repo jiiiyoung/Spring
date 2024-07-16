@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 // Product 테이블에서 받은 정보를 객체로 변환하는 것
+
 @Getter
 @NoArgsConstructor
 public class ProductResponseDto {

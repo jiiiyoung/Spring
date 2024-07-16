@@ -5,6 +5,7 @@ import com.example.myselectshopbeta.myselectshopbeta.dto.ProductMypriceRequestDt
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductRequestDto;
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductResponseDto;
 import com.example.myselectshopbeta.myselectshopbeta.entity.Product;
+import com.example.myselectshopbeta.myselectshopbeta.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
