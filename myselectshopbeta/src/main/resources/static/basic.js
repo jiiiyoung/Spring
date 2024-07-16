@@ -72,7 +72,7 @@ function execSearch() {
 function addHTML(itemDto) {
     /**
      * class="search-itemDto" 인 녀석에서
-     * image, title, lprice, addProduct 활용하기
+     * image, title, lowprice, addProduct 활용하기
      * 참고) onclick='addProduct(${JSON.stringify(itemDto)})'
      */
     return `<div class="search-itemDto">
@@ -139,7 +139,7 @@ function showProduct() {
 }
 
 function addProductItem(product) {
-    // link, image, title, lprice, myprice 변수 활용하기
+    // link, image, title, lowprice, myprice 변수 활용하기
     return `<div class="product-card" onclick="window.location.href='${product.link}'">
                 <div class="card-header">
                     <img src="${product.image}"

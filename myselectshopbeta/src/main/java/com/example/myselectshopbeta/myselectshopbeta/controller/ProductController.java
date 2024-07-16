@@ -44,13 +44,13 @@ public class ProductController {
             throw new SQLException("product 테이블의 마지막 id 값을 찾아오지 못했습니다.");
         }
 
-        ps = connection.prepareStatement("insert into product(id, title, image, link, lprice, myprice) values(?,?,?,?, ?, ?)");
+        ps = connection.prepareStatement("insert into product(id, title, image, link, lowprice, myprice) values(?,?,?,?, ?, ?)");
 
         ps.setLong(1, product.getId());
         ps.setString(2, product.getTitle());
         ps.setString(3, product.getImage());
         ps.setString(4, product.getLink());
-        ps.setInt(5, product.getLprice());
+        ps.setInt(5, product.getLowprice());
         ps.setInt(6, product.getMyprice());
 
         // DB Query 실행
@@ -92,7 +92,7 @@ public class ProductController {
             product.setId(rs.getLong("id"));
             product.setImage(rs.getString("image"));
             product.setLink(rs.getString("link"));
-            product.setLprice(rs.getInt("lprice"));
+            product.setLowprice(rs.getInt("lowprice"));
             product.setMyprice(rs.getInt("myprice"));
             product.setTitle(rs.getString(("title")));
             products.add(new ProductResponseDto(product));
@@ -132,7 +132,7 @@ public class ProductController {
             product.setId(rs.getLong("id"));
             product.setImage(rs.getString("title"));
             product.setLink(rs.getString("link"));
-            product.setLprice(rs.getInt("lprice"));
+            product.setLowprice(rs.getInt("lowprice"));
             product.setMyprice(rs.getInt("myprice"));
             product.setTitle(rs.getString("title"));
         } else {

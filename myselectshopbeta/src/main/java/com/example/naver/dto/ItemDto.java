@@ -18,7 +18,7 @@ public class ItemDto {
         this.title = itemJson.getString("title");
         this.link = itemJson.getString("link");
         this.image = itemJson.getString("image");
-        this.lprice = itemJson.getInt("lprice");
+        this.lprice = itemJson.getInt("lowprice");
     }
 
 }

@@ -26,7 +26,7 @@ public class Product {
     private String link;
 
     @Column(nullable = false)
-    private int lprice;
+    private int lowprice;
 
     @Column(nullable = false)
     private int myprice;
@@ -35,7 +35,7 @@ public class Product {
         this.title = requestDto.getTitle();
         this.image = requestDto.getImage();
         this.link = requestDto.getLink();
-        this.lprice = requestDto.getLprice();
+        this.lowprice = requestDto.getLprice();
         this.myprice = 0;
     }
 

@@ -21,7 +21,7 @@ public class ProductResponseDto {
         this.title = product.getTitle();
         this.link = product.getLink();
         this.image = product.getImage();
-        this.lprice = product.getLprice();
+        this.lprice = product.getLowprice();
         this.myprice = product.getMyprice();
     }
 }

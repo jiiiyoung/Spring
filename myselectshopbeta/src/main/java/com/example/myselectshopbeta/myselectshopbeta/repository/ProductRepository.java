@@ -1,7 +1,6 @@
 package com.example.myselectshopbeta.myselectshopbeta.repository;
 
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductMypriceRequestDto;
-import com.example.myselectshopbeta.myselectshopbeta.dto.ProductRequestDto;
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductResponseDto;
 import com.example.myselectshopbeta.myselectshopbeta.entity.Product;
 
@@ -32,7 +31,7 @@ public class ProductRepository {
         ps.setString(2, product.getTitle());
         ps.setString(3, product.getImage());
         ps.setString(4, product.getLink());
-        ps.setInt(5, product.getLprice());
+        ps.setInt(5, product.getLowprice());
         ps.setInt(6, product.getMyprice());
 
         // DB Query 실행
@@ -62,7 +61,7 @@ public class ProductRepository {
             product.setTitle(rs.getString("title"));
             product.setImage(rs.getString("image"));
             product.setLink(rs.getString("link"));
-            product.setLprice(rs.getInt("lprice"));
+            product.setLowprice(rs.getInt("lowprice"));
             product.setMyprice(rs.getInt("myprice"));
             products.add(new ProductResponseDto(product));
         }
@@ -111,7 +110,7 @@ public class ProductRepository {
             product.setTitle(rs.getString("title"));
             product.setImage(rs.getString("image"));
             product.setLink(rs.getString("link"));
-            product.setLprice(rs.getInt("lprice"));
+            product.setLowprice(rs.getInt("lowprice"));
             product.setMyprice(rs.getInt("myprice"));
         }
 
