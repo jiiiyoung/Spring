@@ -1,4 +1,4 @@
-package com.sparta.momoPJT;
+package com.sparta.memoPJT;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

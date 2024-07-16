@@ -1,7 +1,7 @@
-package com.sparta.momoPJT.entity;
+package com.sparta.memoPJT.entity;
 
 
-import com.sparta.momoPJT.dto.MemoRequestDto;
+import com.sparta.memoPJT.dto.MemoRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

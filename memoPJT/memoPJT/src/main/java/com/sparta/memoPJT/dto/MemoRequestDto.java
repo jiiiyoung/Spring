@@ -1,4 +1,5 @@
-package com.sparta.momoPJT.dto;
+
+package com.sparta.memoPJT.dto;
 
 import lombok.Getter;
 

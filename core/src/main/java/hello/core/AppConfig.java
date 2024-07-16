@@ -1,7 +1,6 @@
 package hello.core;
 
 import hello.core.discount.DiscountPolicy;
-import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
@@ -18,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     // Repository를 바꾸고 싶다면 AppConfig로 와서 바꾸면 된다.
+
     @Bean
     public MemberService memberService(){
         return new MemberServiceImpl(memberRepository());
@@ -30,6 +30,7 @@ public class AppConfig {
 
     @Bean
     public MemberRepository memberRepository() {
+        // DB를 바꾸고 싶으면 해당 Repository를 바꾸면 된다.
         return new MemoryMemberRepository();
     }
 
@@ -39,4 +40,6 @@ public class AppConfig {
         return new RateDiscountPolicy();
 //        return new FixDiscountPolicy();
     }
+
 }
+

@@ -1,5 +1,4 @@
 package hello.core.discount;
-
 import hello.core.member.Grade;
 import hello.core.member.Member;
 
@@ -13,6 +12,7 @@ public class RateDiscountPolicy implements DiscountPolicy {
             // 할인되는 금액만 반환(원래 금액에서 빼야하는 금액)
             return price * discountPercent / 100;
         } else{
+
             return 0;
         }
     }

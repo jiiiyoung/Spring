@@ -1,8 +1,9 @@
-package com.sparta.momoPJT.service;
 
-import com.sparta.momoPJT.dto.MemoRequestDto;
-import com.sparta.momoPJT.entity.Memo;
-import com.sparta.momoPJT.repository.MemoRepository;
+package com.sparta.memoPJT.service;
+
+import com.sparta.memoPJT.dto.MemoRequestDto;
+import com.sparta.memoPJT.entity.Memo;
+import com.sparta.memoPJT.repository.MemoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,7 +41,5 @@ public class MemoService {
         memoRepository.deleteById(id);
         return id;
     }
-
-
 
 }

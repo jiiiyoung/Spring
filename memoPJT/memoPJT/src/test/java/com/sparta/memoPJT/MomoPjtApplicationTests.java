@@ -1,4 +1,4 @@
-package com.sparta.momoPJT;
+package com.sparta.memoPJT;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
