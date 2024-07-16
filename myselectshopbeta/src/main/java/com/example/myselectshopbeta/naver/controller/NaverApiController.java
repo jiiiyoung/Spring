@@ -1,8 +1,8 @@
-package com.example.naver.controller;
+package com.example.myselectshopbeta.naver.controller;
 
 
-import com.example.naver.dto.ItemDto;
-import com.example.naver.service.NaverApiService;
+import com.example.myselectshopbeta.naver.dto.ItemDto;
+import com.example.myselectshopbeta.naver.service.NaverApiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

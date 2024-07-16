@@ -18,12 +18,17 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class ProductController {
+    private final ProductService productService;
+
+    public ProductController(){
+        this.productService = new ProductService();
+    }
 
     // 관심상품 등록
     @PostMapping("/products")
     public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto) throws SQLException {
 
-        ProductService productService = new ProductService();
+
 
         return productService.createProduct(requestDto);
 
@@ -70,8 +75,6 @@ public class ProductController {
     @GetMapping("/products")
     public List<ProductResponseDto> getProducts() throws SQLException {
 
-        ProductService productService = new ProductService();
-
         // 응답 보내기
         return productService.getProducts();
 
@@ -110,8 +113,6 @@ public class ProductController {
     // 최저가격 등록
     @PutMapping("/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) throws SQLException {
-
-        ProductService productService = new ProductService();
 
         // 응답 보내기(업데이트 된 상품 id)
         return productService.updateProduct(id, requestDto);

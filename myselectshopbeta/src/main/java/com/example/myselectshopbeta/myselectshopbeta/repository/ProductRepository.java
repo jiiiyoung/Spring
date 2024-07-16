@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepository {
+
+
+
     // createProduct, getProducts, updateProduct, getProduct(id)
 
     public ProductResponseDto createProduct(Product product) throws SQLException {
@@ -90,7 +93,7 @@ public class ProductRepository {
         ps.close();
         connection.close();
 
-        return product.getId();
+        return null;
     }
 
     public Product getProduct(Long id) throws SQLException {
