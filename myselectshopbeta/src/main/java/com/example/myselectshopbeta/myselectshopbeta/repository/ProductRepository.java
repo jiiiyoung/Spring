@@ -79,7 +79,7 @@ public class ProductRepository {
         Connection connection = DriverManager.getConnection("jdbc:h2:mem:db", "sa", "");
 
         // DB Query 작성
-        PreparedStatement ps = connection.prepareStatement("update myprice = ? where id = ?");
+        PreparedStatement ps = connection.prepareStatement("update product myprice = ? where id = ?");
         ps.setInt(1, requestDto.getMyprice());
         ps.setLong(2, id);
 
