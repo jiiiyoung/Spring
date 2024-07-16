@@ -14,18 +14,13 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/api")
 public class ProductController {
-
-    // 홈화면
-    @GetMapping("/shop")
-    public ModelAndView shop() {
-        return new ModelAndView("index");
-    }
 
     // 관심상품 등록
     @PostMapping("/products")
-    public ProductResponseDto add(@RequestBody ProductRequestDto requestDto) throws SQLException {
+    public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto) throws SQLException {
         // Dto에 저장할 객체 만들기
         Product product = new Product(requestDto);
 
@@ -136,7 +131,6 @@ public class ProductController {
 
         // 응답 보내기(업데이트 된 상품 id)
         return product.getId();
-
 
     }
 }

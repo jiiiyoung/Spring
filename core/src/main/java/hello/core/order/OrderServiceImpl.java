@@ -8,9 +8,23 @@ import hello.core.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
 
-    // 회원 조회, 할인정책여부 결정
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    // 회원 조회
+    // 회원 조회를 위해 DB를 바꾸려면 클라이언트 코드를 변경해야 한다. 따라서 OCP, DIP를 위반한다.
+//     private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    // 할인 정책여부 결정
+    // 할인 정책을 바꾸려먼 Impl(클라이언트) 코드를 변경해야 한다. 따라서 OCP, DIP를 위반
+//     private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+
+    // OCP, DIP원칙을 지키기 위해 인터페이스에만 의존하도록 코드 변경.
+    // 의존관계 주입(DI) : 외부에서 의존관계를 주입해 준다.
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
