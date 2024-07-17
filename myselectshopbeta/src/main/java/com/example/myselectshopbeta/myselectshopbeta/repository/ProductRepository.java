@@ -3,14 +3,23 @@ package com.example.myselectshopbeta.myselectshopbeta.repository;
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductMypriceRequestDto;
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductResponseDto;
 import com.example.myselectshopbeta.myselectshopbeta.entity.Product;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ProductRepository {
+    /*
+    public ProductRepository(String id, String pw) throws SQLException{
+        Connection connection = DriverManager.getConnection("jdbc:h2:mem:db", id, pw);
+    }
 
-
+    String id = "sa";
+    String pw = "";
+    ProductRepository productRepository = new ProductRepository(id, pw);
+    */
 
     // createProduct, getProducts, updateProduct, getProduct(id)
 

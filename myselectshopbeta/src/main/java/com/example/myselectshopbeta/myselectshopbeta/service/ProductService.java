@@ -16,8 +16,8 @@ public class ProductService {
     // 멤버 변수 선언
     private final ProductRepository productRepository;
 
-    public ProductService() {
-        this.productRepository = new ProductRepository();
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
     // createProduct, getProducts, updateProduct(id, requestDto)

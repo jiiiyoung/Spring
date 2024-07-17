@@ -20,14 +20,13 @@ import java.util.List;
 public class ProductController {
     private final ProductService productService;
 
-    public ProductController(){
-        this.productService = new ProductService();
+    public ProductController(ProductService productService){
+        this.productService = productService;
     }
 
     // 관심상품 등록
     @PostMapping("/products")
     public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto) throws SQLException {
-
 
 
         return productService.createProduct(requestDto);
