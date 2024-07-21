@@ -1,9 +1,10 @@
-package com.example.myselectshopbeta.naver.controller;
+package com.example.myselectshopbeta.myselectshopbeta.naver.controller;
 
 
-import com.example.myselectshopbeta.naver.dto.ItemDto;
-import com.example.myselectshopbeta.naver.service.NaverApiService;
+import com.example.myselectshopbeta.myselectshopbeta.naver.dto.ItemDto;
+import com.example.myselectshopbeta.myselectshopbeta.naver.service.NaverApiService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ import java.util.List;
 @RestController
 // "/api"로 들어오는 요청은 모두 이 클래스가 처리한다는 의미
 @RequestMapping("/api")
+@Slf4j
 @RequiredArgsConstructor // 롬북 어노테이션) final키워드가 붙은 필드들 생성자 자동 생성
 public class NaverApiController {
     private final NaverApiService naverApiService;
@@ -22,7 +24,10 @@ public class NaverApiController {
     // 실제 경로는 "/api/search"가 된다. (@RequestMapping 어노테이션으로 인해)
     @GetMapping("/search")
     public List<ItemDto> searchItems(@RequestParam String query) {
+        log.info("탐색");
         return naverApiService.searchItems(query);
+
     }
+
 
 }

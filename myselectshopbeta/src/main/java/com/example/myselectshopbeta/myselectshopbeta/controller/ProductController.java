@@ -4,15 +4,13 @@ package com.example.myselectshopbeta.myselectshopbeta.controller;
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductMypriceRequestDto;
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductRequestDto;
 import com.example.myselectshopbeta.myselectshopbeta.dto.ProductResponseDto;
-import com.example.myselectshopbeta.myselectshopbeta.entity.Product;
 import com.example.myselectshopbeta.myselectshopbeta.service.ProductService;
-import org.springframework.stereotype.Controller;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,16 +18,19 @@ import java.util.List;
 public class ProductController {
     private final ProductService productService;
 
+    // Lombok의 @RequiredArgsConstructor을 사용하면 아래 코드 생략 가능
+    @Autowired
     public ProductController(ProductService productService){
         this.productService = productService;
     }
 
+
     // 관심상품 등록
     @PostMapping("/products")
-    public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto) throws SQLException {
+    public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto, HttpServletRequest request) {
 
-
-        return productService.createProduct(requestDto);
+        // 응답보내기
+        return productService.createProduct(requestDto, request);
 
         /*  컨트롤러가 모든 역할을 다 할 때 cotroller, service, repository의 코드가 다 있다.
         // Dto에 저장할 객체 만들기
@@ -72,10 +73,10 @@ public class ProductController {
 
     // 관심상품(전체) 조회
     @GetMapping("/products")
-    public List<ProductResponseDto> getProducts() throws SQLException {
+    public List<ProductResponseDto> getProducts(HttpServletRequest request){
 
         // 응답 보내기
-        return productService.getProducts();
+        return productService.getProducts(request);
 
         /*
         // DB의 데이터 가져와 담을 리스트 생성(원래 있던 리스트를 초기화)
@@ -111,10 +112,10 @@ public class ProductController {
 
     // 최저가격 등록
     @PutMapping("/products/{id}")
-    public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) throws SQLException {
+    public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto, HttpServletRequest request) {
 
         // 응답 보내기(업데이트 된 상품 id)
-        return productService.updateProduct(id, requestDto);
+        return productService.updateProduct(id, requestDto, request);
 
         /*
         Product product = new Product();

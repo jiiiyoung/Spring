@@ -1,4 +1,4 @@
-package com.example.myselectshopbeta.naver.dto;
+package com.example.myselectshopbeta.myselectshopbeta.naver.dto;
 
 
 import lombok.Getter;
@@ -11,14 +11,14 @@ public class ItemDto {
     private String title;
     private String link;
     private String image;
-    private int lprice;
+    private int lowprice;
 
     // JSON 타입의 데이터를 ItemDto의 형식으로 변경(Stirn, Int타입으로)
     public ItemDto(JSONObject itemJson) {
         this.title = itemJson.getString("title");
         this.link = itemJson.getString("link");
         this.image = itemJson.getString("image");
-        this.lprice = itemJson.getInt("lowprice");
+        this.lowprice = itemJson.getInt("lprice");
     }
 
 }
