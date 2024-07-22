@@ -34,9 +34,10 @@ public class UserController {
         return "redirect:/api/user/login";
     }
 
+
     @ResponseBody
     @PostMapping("/login")
-    public String login(@RequestBody LoginRequestDto loginRequestDto, HttpServletResponse response) {
+    public String login(LoginRequestDto loginRequestDto, HttpServletResponse response) {
         userService.login(loginRequestDto, response);
         return "success";
     }
