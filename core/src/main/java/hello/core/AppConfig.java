@@ -20,16 +20,26 @@ public class AppConfig {
 
     @Bean
     public MemberService memberService(){
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
+    // @Bean memberService -> repository -> new MemoryMemberRepository()
+    // @Bean orderService -> repository -> new MemoryMemberRepository()
+    // MemoryMemberRepository를 두 개 생성? 싱글톤에 어긋나나?
+
+
 
     @Bean
     public OrderService orderService(){
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
+        // memberService에서 호출되면 한번 호출 되고, 그 후에는 ~~~~~~~~~해서 싱글톤을 보장한다.
+
         // DB를 바꾸고 싶으면 해당 Repository를 바꾸면 된다.
         return new MemoryMemberRepository();
     }
