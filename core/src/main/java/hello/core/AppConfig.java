@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 // Config는 애플리케이션의 실제 동작에 필요한 구현 객체를 생성한다.
 // 생성한 객체 인스턴스의 참조(레퍼런스)를 생성자를 통해서 주입(연결)해준다.
-@Configuration
+@Configuration // 이 어노테이션이 없다면 싱글톤 보장 안됨
 public class AppConfig {
 
     // Repository를 바꾸고 싶다면 AppConfig로 와서 바꾸면 된다.

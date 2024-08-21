@@ -33,5 +33,20 @@ public class ConfigurationSingletonTest {
 
     }
 
+    @Test
+    void configurationDeep(){
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
+        AppConfig bean = ac.getBean(AppConfig.class); // AppConfig가 부모, @CGLIB가 자식, 따라서 부모를 조회하니까 자식이 따라나옴
+
+        System.out.println("Bean = " + bean.getClass());
+        // Bean = class hello.core.AppConfig$$SpringCGLIB$$0
+
+        /*
+        AppConfig를 스프링 빈으로 등록하는 것이 아닌,
+        CGLIB라는 바이트코드 조작 라이브러리를 사용해서
+        AppConfig를 상속받은 다른 클래스(AppConfig@CGLIB)를 스프링빈으로 등록한 것이다.
+        */
+
+    }
 }
