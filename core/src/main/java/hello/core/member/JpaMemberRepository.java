@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
-@Repository
+//@Repository
 public class JpaMemberRepository implements MemberRepository {
 
     @PersistenceContext
