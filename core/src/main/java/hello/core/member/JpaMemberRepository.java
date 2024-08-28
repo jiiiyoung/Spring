@@ -9,7 +9,7 @@ import jakarta.persistence.PersistenceContext;
 //@Repository
 public class JpaMemberRepository implements MemberRepository {
 
-    @PersistenceContext
+    @PersistenceContext // 스프링에서 만들어둔 EntityManager를 자동으로 주입받을때 사용
     private EntityManager em;
 
     @Override
