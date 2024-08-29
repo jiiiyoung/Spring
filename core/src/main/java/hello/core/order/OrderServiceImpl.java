@@ -21,14 +21,46 @@ public class OrderServiceImpl implements OrderService {
 
     // OCP, DIP원칙을 지키기 위해 인터페이스에만 의존하도록 코드 변경.
     // 의존관계 주입(DI) : 외부에서 의존관계를 주입해 준다.
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy;
 
+    // 필드 주입
+//    @Autowired
+    private MemberRepository memberRepository;
+//    @Autowired
+    private DiscountPolicy discountPolicy;
+
+    /*
+    // 일반 메서드 주입
+    private MemberRepository memberRepository;
+    private DiscountPolicy discountPolicy;
+
+    @Autowired
+    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+    */
+
+    // 생성자 주입
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
+
+    /*
+    // 수정자 주입. 이때는 private final MemberRepository에서 final을 빼야한다.
+    @Autowired
+    public void setMemberRepository(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    @Autowired
+    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+        this.discountPolicy = discountPolicy;
+    }
+    */
+
+
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
