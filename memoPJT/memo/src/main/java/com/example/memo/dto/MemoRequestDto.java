@@ -1,5 +1,5 @@
 
-package com.sparta.memoPJT.dto;
+package com.example.memo.dto;
 
 import lombok.Getter;
 

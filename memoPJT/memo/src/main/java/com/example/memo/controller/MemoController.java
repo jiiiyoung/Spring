@@ -1,8 +1,8 @@
-package com.sparta.memoPJT.controller;
+package com.example.memo.controller;
 
-import com.sparta.memoPJT.entity.Memo;
-import com.sparta.memoPJT.dto.MemoRequestDto;
-import com.sparta.memoPJT.service.MemoService;
+import com.example.memo.dto.MemoRequestDto;
+import com.example.memo.entity.Memo;
+import com.example.memo.service.MemoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;

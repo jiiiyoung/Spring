@@ -1,10 +1,10 @@
-package com.sparta.memoPJT;
+package com.example.memo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MomoPjtApplicationTests {
+class MemoApplicationTests {
 
 	@Test
 	void contextLoads() {

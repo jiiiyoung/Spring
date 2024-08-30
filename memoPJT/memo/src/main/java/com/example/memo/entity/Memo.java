@@ -1,7 +1,8 @@
-package com.sparta.memoPJT.entity;
+package com.example.memo.entity;
 
 
-import com.sparta.memoPJT.dto.MemoRequestDto;
+
+import com.example.memo.dto.MemoRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

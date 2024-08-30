@@ -1,9 +1,9 @@
 
-package com.sparta.memoPJT.repository;
+package com.example.memo.repository;
 
-import com.sparta.memoPJT.entity.Memo;
+
+import com.example.memo.entity.Memo;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

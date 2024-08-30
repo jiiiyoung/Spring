@@ -1,5 +1,5 @@
 
-package com.sparta.memoPJT.entity;
+package com.example.memo.entity;
 
 
 import jakarta.persistence.EntityListeners;

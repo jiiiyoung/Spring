@@ -1,9 +1,9 @@
 
-package com.sparta.memoPJT.service;
+package com.example.memo.service;
 
-import com.sparta.memoPJT.dto.MemoRequestDto;
-import com.sparta.memoPJT.entity.Memo;
-import com.sparta.memoPJT.repository.MemoRepository;
+import com.example.memo.dto.MemoRequestDto;
+import com.example.memo.entity.Memo;
+import com.example.memo.repository.MemoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
