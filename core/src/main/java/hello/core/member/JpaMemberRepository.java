@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
+// 현재 MeberRepository와 bean등록이 겹쳐 오류 발생. 일단 repository 주석처리
 //@Repository
 public class JpaMemberRepository implements MemberRepository {
 
