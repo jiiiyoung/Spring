@@ -1,7 +1,5 @@
 package com.example.logintest.domain.entity;
 
-// https://ksh-coding.tistory.com/57?category=1065031
-
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
