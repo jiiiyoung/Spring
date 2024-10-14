@@ -56,8 +56,9 @@ public class AutoAppConfigTest {
         /*
          EntityManager를 사용하려면 jpa관련해 설정하는 클래스 만들고, 클래스도 등록해야한다.
          @PersistenceContext를 쓰면 스프링 컨테이너에서 자동으로 생성해준다.
-         하지만 AnnotationConfigApplicationContext해서 생성하는 스프링 컨테이너는 그러한 기능이 없어서 오류가 발생
+         하지만 AnnotationConfigApplicationContext에서 생성하는 스프링 컨테이너는 그러한 기능이 없어서 오류가 발생
          따라서 jpa관련 설정도 따로 해주고, AnnotationConfigApplicationContext를 생성 할 때에는 jpa클래스도 등록해줘야한다.
+         그리고 JPA를 이용하기 위해서 DB 연결 설정도 따로 해주어야한다.
         */
 
         ApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class, JpaConfig.class);

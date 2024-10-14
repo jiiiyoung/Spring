@@ -14,6 +14,7 @@ public class MemberServiceImpl implements MemberService {
     // 생성자주입
     private final MemberRepository memberRepository;
 
+    // 컴포넌트 스캔을 쓰게 되면, 의존관계를 수동으로 설정할 공간이 없어서 @Autowired를 쓰게 되는 것이다.
     @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
