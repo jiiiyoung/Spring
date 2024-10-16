@@ -1,0 +1,13 @@
+<!-- ApplicationContext를 직접 생성해서 스프링부트를 실행하는 경우에 Debug레벨의 로그 출력하는 코드 -->
+<!-- 이 부분은 후에 Info 레벨로 변경하기, ApplicationContext로 하지 않는 경우 -->
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp-
+                %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
