@@ -1,40 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8d7707d-545b-46bd-93fa-07a0586a394f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/aop/TimeTraceAop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/hello-spring/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/repository/JpaMemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/repository/JpaMemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/repository/SpringDataJpaMemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/repository/SpringDataJpaMemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/java/hello/hello_spring/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/hello-spring/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/.idea/momoPJT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/momoPJT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/java/com/sparta/momoPJT/MomoPjtApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/java/com/sparta/momoPJT/MomoPjtApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/java/com/sparta/momoPJT/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/java/com/sparta/momoPJT/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/resources/static/images/delete.png" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/resources/static/images/delete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/resources/static/images/done.png" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/resources/static/images/done.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/resources/static/images/edit.png" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/resources/static/images/edit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/resources/static/images/send.png" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/resources/static/images/send.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../momoPJT/momoPJT/src/test/java/com/sparta/momoPJT/MomoPjtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/memoPJT/src/test/java/com/sparta/momoPJT/MomoPjtApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="d8d7707d-545b-46bd-93fa-07a0586a394f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,8 +33,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -78,6 +48,7 @@
       <updated>1719133587107</updated>
       <workItem from="1719133588200" duration="19000" />
       <workItem from="1720406837428" duration="41000" />
+      <workItem from="1734759324292" duration="56000" />
     </task>
     <servers />
   </component>
