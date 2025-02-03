@@ -4,6 +4,7 @@ import com.example.memo.dto.MemoRequestDto;
 import com.example.memo.entity.Memo;
 import com.example.memo.service.MemoService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -39,6 +40,5 @@ public class MemoController {
     public Long deleteMemo(@PathVariable Long id) {
         return memoService.deleteMemo(id);
     }
-
 
 }

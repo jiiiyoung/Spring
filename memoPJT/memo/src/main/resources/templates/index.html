@@ -103,6 +103,7 @@
         function writePost() {
             // 1. 작성한 메모를 불러옵니다.
             let contents = $('#contents').val();
+            let fileInput = $('#fileInput').val();
 
             // 2. 작성한 메모가 올바른지 isValidContents 함수를 통해 확인합니다.
             if (isValidContents(contents) == false) {
@@ -113,7 +114,7 @@
             let username = genRandomName(10);
 
             // 4. 전달할 data JSON으로 만듭니다.
-            let data = {'username': username, 'contents': contents};
+            let data = {'username': username, 'contents': contents, 'uploadFileName' : fileInput};
 
             $.ajax({
                 type: "POST",
@@ -398,7 +399,9 @@
     </div>
     <div class="area-write">
         <textarea class="field" placeholder="공유하고 싶은 소식을 입력하세요." name="contents" th:id="contents" cols="30"
-                  rows="10"></textarea>
+                  rows="10">
+        </textarea>
+        <input type="file" th:id="fileInput" accept=".doc, .docx, application/msword, .txt, .pdf" style="display: block;">
         <img src="/images/send.png" alt="" onclick="writePost()">
     </div>
     <div id="cards-box" class="area-read">

@@ -4,6 +4,8 @@ package com.example.memo.entity;
 
 import com.example.memo.dto.MemoRequestDto;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -21,14 +23,18 @@ public class Memo extends Timestamped{
     @Column(nullable = false)
     private String contents;
 
-    public Memo(String username, String contents) {
+    @Column(nullable = true)
+    private String uploadFileName;
+
+    @Column(nullable = true)
+    private String storeFileName;
+
+    @Builder
+    public Memo(String username, String contents, String uploadFileName, String storeFileName) {
         this.username = username;
         this.contents = contents;
-    }
-
-    public Memo(MemoRequestDto requestDto) {
-        this.username = requestDto.getUsername();
-        this.contents = requestDto.getContents();
+        this.uploadFileName = uploadFileName;
+        this.storeFileName = storeFileName;
     }
 
     public void update(MemoRequestDto memoRequestDto) {
